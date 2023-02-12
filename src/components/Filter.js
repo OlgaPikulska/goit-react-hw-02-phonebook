@@ -15,7 +15,6 @@ width: 200px;
 
 
 export const Filter = ({ addFilterValue }) => {
-
     return (
         <>
             <StyledLabel>Find contacts by name
@@ -24,5 +23,4 @@ export const Filter = ({ addFilterValue }) => {
             </StyledLabel>
         </>
     )
-
 } 

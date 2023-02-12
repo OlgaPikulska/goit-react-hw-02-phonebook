@@ -23,20 +23,21 @@ margin-top: 25px;
 width: 100px;
 background-color: white;
 border: 1px solid rgb(148, 146, 146);
+
 border-radius: 3px;
 `
 const INITIAL_STATE = {
     name: "",
     number: "",
 }
-export class Phonebook extends Component {
+export class ContactForm extends Component {
     state = { ...INITIAL_STATE };
 
     handleSubmit = (e) => {
         e.preventDefault();
         const form = e.currentTarget;
         this.props.handleSubmit({ ...this.state });
-        console.log(this.state)
+        //console.log(this.state)
         this.reset();
         form.reset();
     };
