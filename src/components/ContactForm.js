@@ -14,7 +14,7 @@ flex-direction: column;
 `
 
 const StyledInput = styled.input`
-margin-top: 5px;
+margin-top: 5px;        
 width: 200px;
 `
 export const StyledButton = styled.button`
@@ -23,6 +23,7 @@ padding: 3px 5px 3px 5px;
 background-color: white;
 border: 1px solid rgb(148, 146, 146);
 border-radius: 3px;
+cursor: pointer;
 :hover {
     background-color: rgb(79, 158, 215);
 }
