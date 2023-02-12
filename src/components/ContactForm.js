@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-//import PropTypes from 'prop-types';
 import { nanoid } from "nanoid";
 
 const StyledForm = styled.form`
@@ -18,13 +17,18 @@ const StyledInput = styled.input`
 margin-top: 5px;
 width: 200px;
 `
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
 margin-top: 25px;
-width: 100px;
+padding: 3px 5px 3px 5px;
 background-color: white;
 border: 1px solid rgb(148, 146, 146);
-
 border-radius: 3px;
+:hover {
+    background-color: rgb(79, 158, 215);
+}
+:focus {
+    background-color: rgb(79, 158, 215);
+}
 `
 const INITIAL_STATE = {
     name: "",
@@ -37,7 +41,6 @@ export class ContactForm extends Component {
         e.preventDefault();
         const form = e.currentTarget;
         this.props.handleSubmit({ ...this.state });
-        //console.log(this.state)
         this.reset();
         form.reset();
     };
@@ -53,7 +56,6 @@ export class ContactForm extends Component {
     };
 
     render() {
-        //const { name } = this.state
         return (
             <StyledForm onSubmit={this.handleSubmit}>
                 <StyledLabel>
@@ -85,8 +87,3 @@ export class ContactForm extends Component {
         )
     }
 }
-
-// Phonebook.propTypes = {
-//     onChange: PropTypes.func,
-//     onClick: PropTypes.func
-// }

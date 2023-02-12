@@ -4,7 +4,6 @@ import { Section } from "./Section";
 import { ContactList } from "./ContactList";
 import { nanoid } from "nanoid";
 import { Filter } from "./Filter";
-//export { ContactList } from "./ContactList"
 
 export class App extends Component {
 
@@ -43,11 +42,16 @@ export class App extends Component {
       contacts.push(newContact);
       this.setState({ contacts: contacts })
     }
-
   }
 
   addFilterValue = (e) => {
     this.setState({ filter: e.target.value })
+  }
+
+  deleteContact = (e) => {
+    const { contacts } = this.state;
+    const newContacts = contacts.filter(contact => contact.id !== e.target.id)
+    this.setState({ contacts: newContacts })
   }
 
   render() {
@@ -61,6 +65,7 @@ export class App extends Component {
           <ContactList
             contacts={this.state.contacts}
             filterValue={this.state.filter}
+            deleteContact={this.deleteContact}
           />
         </Section>
       </>

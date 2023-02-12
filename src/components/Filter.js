@@ -1,4 +1,4 @@
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import React from "react";
 import styled from "styled-components";
 
@@ -23,4 +23,8 @@ export const Filter = ({ addFilterValue }) => {
             </StyledLabel>
         </>
     )
-} 
+}
+
+Filter.propTypes = {
+    addFilterValue: PropTypes.func,
+}
