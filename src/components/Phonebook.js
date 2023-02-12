@@ -7,6 +7,7 @@ const StyledForm = styled.form`
 border: 1px solid black;
 padding: 10px 5px 10px 5px;
 width: 300px;
+margin-left: 10px;
 `
 const StyledLabel = styled.label`
 display: flex;
@@ -51,7 +52,7 @@ export class Phonebook extends Component {
     };
 
     render() {
-        const { name } = this.state
+        //const { name } = this.state
         return (
             <StyledForm onSubmit={this.handleSubmit}>
                 <StyledLabel>
