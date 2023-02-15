@@ -39,8 +39,7 @@ export class App extends Component {
     } else if (isNumberOnList) {
       alert(`This number ${newContact.number} is already in contacts`)
     } else {
-      contacts.push(newContact);
-      this.setState({ contacts: contacts })
+      this.setState({ contacts: [...contacts, newContact] })
     }
   }
 
